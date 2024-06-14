@@ -66,7 +66,7 @@ Minh họa sóng siêu âm từ phát phát T (Transmitter) đến vật cản b
 - Cài đặt Extension MakerEdu Hardware trên MadeCode và tham khảo các khối chức năng theo hướng dẫn.
 - Tham khảo cách kết nối và nạp chương trình cho Micro:bit trên máy tính hoặc điện thoại, máy tính bảng.
 Chương trình mẫu:
-- icro:Bit đọc liên tục giá trị khoảng cách từ cảm biến siêu âm, với chu kỳ mỗi 0,5s.
+- Micro:Bit đọc liên tục giá trị khoảng cách từ cảm biến siêu âm, với chu kỳ mỗi 0,5s.
 - Sau đó cho hiển thị giá trị lên màn hình LCD, với đơn vị (cm).
 
 ## Hỗ trợ và liên hệ:

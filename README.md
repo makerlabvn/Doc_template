@@ -10,8 +10,10 @@ Cảm biến siêu âm đo khoảng cách đến vật cản bằng cách phát 
 ## Nguyên lý hoạt động
 
 Khoảng cách đến vật cản L = (khoảng thời gian t * vận tốc sóng siêu âm) / 2
-Minh họa sóng siêu âm từ phát phát T (Transmitter) đến vật cản bị phản xạ lại và truyền tới mắt thu R (Receiver).
-Minh họa sóng siêu âm từ phát phát T (Transmitter) đến vật cản bị phản xạ lại và truyền tới mắt thu R (Receiver).
+
+![MKE_S01_Ultrasonic](/image/MKE_S01_Ultrasonic_3.jpg)
+- Minh họa sóng siêu âm từ phát phát T (Transmitter) đến vật cản bị phản xạ lại và truyền tới mắt thu R (Receiver).
+- Minh họa sóng siêu âm từ phát phát T (Transmitter) đến vật cản bị phản xạ lại và truyền tới mắt thu R (Receiver).
 
 Để tăng độ chính xác và giảm nhiễu, sóng siêu âm sẽ được mắt phát T (Transmitter) phát ra theo tần số chuyên biệt để không bị nhiễu với các loại sóng khác của môi trường, phương pháp đo khoảng cách bằng cảm biến siêu âm tương đối chính xác và ổn định, tuy nhiên vẫn có một nhược điểm của phương pháp này là phụ thuộc vào hình dạng của vật thể phản xạ, vật thể có bề mặt không phẳng sẽ làm ảnh hưởng đến độ phản xạ của sóng siêu âm dẫn đến kết quả đo kém chính xác. 
 
@@ -32,42 +34,64 @@ Minh họa sóng siêu âm từ phát phát T (Transmitter) đến vật cản b
 
 ## Hình ảnh sản phẩm
 
+![MKE_S01_Ultrasonic](/image/MKE_S01_Ultrasonic_1.jpg)
+
+![MKE_S01_Ultrasonic](/image/MKE_S01_Ultrasonic_2.jpg)
+
+## Kích thước sản phẩm
+
+![MKE_S01_Ultrasonic](/image/MKE_S01_Ultrasonic_4.JPG)
+
 ## Các chân tín hiệu
 
-> - GND:	Chân cấp nguồn âm 0VDC
-> - 5V:	Chân cấp nguồn dương 5VDC
-> - TRIG:	Chân tín hiệu ngõ vào Trigger (Input: 3.3~5VDC)
-> - ECHO:	Chân tín hiệu ngõ ra Echo (Output: 3.3VDC)
-
+- GND:	Chân cấp nguồn âm 0VDC
+- 5V:	Chân cấp nguồn dương 5VDC
+- TRIG:	Chân tín hiệu ngõ vào Trigger (Input: 3.3~5VDC)
+- ECHO:	Chân tín hiệu ngõ ra Echo (Output: 3.3VDC)
 
 ## Hướng dẫn sử dụng
 
-### Hướng dẫn sử dụng với Arduino sử dụng Vietduino Uno và MakerEdu Shield for Arduino (Code C)
+### Các thiết bị sử dụng trong bài hướng dẫn:
 
+#### Arduino:
+- [Mạch Vietduino Uno (Arduino Uno Compatible)](https://github.com/makerlabvn/Vietduino-Uno)
+- [Mạch MakerEdu Shield for Arduino](https://github.com/makerlabvn/MakerEdu-Shield-for-Arduino)
+- [Mạch màn hình LCD1602 I2C Display Module](https://github.com/makerlabvn/MKE-M07-LCD1602-I2C-Display-Module)
+
+#### mBlock:
+
+- [Mạch MakerEdu Creator (Arduino Uno Compatible)](https://github.com/makerlabvn/MakerEdu-Creator)
+- [Mạch màn hình LCD1602 I2C Display Module](https://github.com/makerlabvn/MKE-M07-LCD1602-I2C-Display-Module)
+
+#### Micro:bit:
+
+- Mạch Micro:bit V2 hoặc các phiên bản tương thích.
+- [Mạch MakerEdu Shield for Micro:bit](https://github.com/makerlabvn/MakerEdu-Shield-for-Microbit)
+- [Mạch màn hình LCD1602 I2C Display Module](https://github.com/makerlabvn/MKE-M07-LCD1602-I2C-Display-Module)
+
+### Hướng dẫn sử dụng với Arduino (Code C)
 - Tải và cài đặt [phần mềm Arduino tại đây.](https://www.arduino.cc/en/software)
 - Trong Tools / Library Manager, tìm và cài đặt bộ thư viện tổng hợp "MAKERLABVN" by MakerLab.vn
 - Mở chương trình mẫu tại File / Examples / MAKERLABVN / Sensor / MKE-S01_Ultrasonic hoặc [tải chương trình mẫu tại đây](/arduino)
 - Chọn board là Arduino Uno (mạch Vietduino Uno tương thích với Arduino Uno), chọn đúng cổng COM Port của mạch và tiến hành nạp chương trình.
-- Kết nối mạch Vietduino Uno với MakerEdu Shield, kết nối cảm biến tại cổng [D12,13] trên MakerEdu Shield, bật Serial Monitor trên phần mềm Arduino (Baudrate: 115200) để thấy chương trình hoạt động.
+- Kết nối mạch Vietduino Uno với MakerEdu Shield, kết nối cảm biến tại cổng [D12,13] và màn hình LCD vào cổng [I2C] trên MakerEdu Shield, cấp nguồn qua cổng USB của Vietduino Uno để thấy chương trình hoạt động.
 
-### Hướng dẫn lập trình với mBlock sử dụng MakerEdu Creator (kéo thả khối)
+### Hướng dẫn lập trình với mBlock (kéo thả khối)
 
 - Tải và cài đặt phần mềm mBlock 5 ([Windows](https://www.mediafire.com/file/ma55iajd7glwmbo/%255BMakerLab.vn%255D_mBlock_V5.4.3_for_Windows.zip/file) / [Mac Intel](https://www.mediafire.com/file/pjfngy6d7ktb55f/%255BMakerLab.vn%255D_mBlock_V5.4.3_for_Mac_Intel.zip/file) / [Mac M1M2](https://www.mediafire.com/file/mfdkgpgnpa7uv2s/%255BMakerLab.vn%255D_mBlock_V5.4.3_for_Mac_M1M2.zip/file))
 - Thêm Device "MakerEdu Creator" by MakerEduVN
 - Thêm Extension "Upload Mode Broadcast" by mBlock Official
 - Thêm Extension "MakerEdu Hardware" by MakerEduVN
-- Mở [chương trình mẫu tại đây](/mBlock5), kết nối mạch và nạp chương trình.
-- Kết nối cảm biến với cổng [D12,13] trên MakerEdu Creator, mở trên phần mềm mblock để thấy chương trình hoạt động.
+- Mở [chương trình mẫu tại đây](/mBlock5), kết nối MakerEdu Creator với máy tính và nạp chương trình.
+- Kết nối cảm biến với cổng [D3,D2] và màn hình LCD vào cổng [I2C] trên MakerEdu Creator, cấp nguồn qua cổng USB của MakerEdu Creator để thấy chương trình hoạt động.
 
 
-### Hướng dẫn lập trình với Makecode sử dụng Micro:bit và MakerEdu Shield for Micro:bit (kéo thả khối)
+### Hướng dẫn lập trình với Micro:bit (kéo thả khối)
 
 - Khởi động phần mềm MakeCode theo hướng dẫn.
-- Cài đặt Extension MakerEdu Hardware trên MadeCode và tham khảo các khối chức năng theo hướng dẫn.
-- Tham khảo cách kết nối và nạp chương trình cho Micro:bit trên máy tính hoặc điện thoại, máy tính bảng.
-Chương trình mẫu:
-- Micro:Bit đọc liên tục giá trị khoảng cách từ cảm biến siêu âm, với chu kỳ mỗi 0,5s.
-- Sau đó cho hiển thị giá trị lên màn hình LCD, với đơn vị (cm).
+- Cài đặt Extension MakerEdu Hardware trên MadeCode theo đường link sau: [https://github.com/makerlabvn/MakerEdu_Hardware](https://github.com/makerlabvn/MakerEdu_Hardware)
+- Mở [chương trình mẫu tại đây](/microbit), kết nối Micro:bit với máy tính và nạp chương trình.
+- Kết nối mạch Micro:bit với MakerEdu Shield, kết nối cảm biến tại cổng [P0+P1] và màn hình LCD vào cổng [I2C] trên MakerEdu Shield, cấp nguồn qua cổng USB của MakerEdu Shield để thấy chương trình hoạt động.
 
 ## Hỗ trợ và liên hệ:
 
